@@ -43,7 +43,7 @@ memory usage by application - sum by(container) (container_memory_usage_bytes{co
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
 
 
-![Alt text](answer-img/Dashboard Measure SLI.png) 
+![Alt text](answer-img/Dashboard_Measure_SLI.png) 
 
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
@@ -56,7 +56,8 @@ memory usage by application - sum by(container) (container_memory_usage_bytes{co
 ## Jaeger in Dashboards
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
 
-screenshot answer-img/Dashboard_Jaeger.png
+![Alt text](answer-img/Dashboard_Jaeger.png) 
+
 
 ## Report Error
 *TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
