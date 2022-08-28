@@ -121,9 +121,9 @@ Description:
 
 SLI
 
-Error
-traffic
-latency
+Error,
+traffic,
+latency,
 saturation
 
 
