@@ -9,12 +9,14 @@ screenshot ![Alt text](answer-img/verify_monitoring_installation.png)
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
 
-screenshot answer-img/grafana_homepage.png
+
+screenshot ![Alt text](answer-img/grafana_homepage.png) 
 
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
 
-screenshot answer-img/prometheus_datasource_grafana.png
+
+screenshot ![Alt text](answer-img/prometheus_datasource_grafana.png) 
 
 
 ## Describe SLO/SLI
@@ -40,13 +42,15 @@ memory usage by application - sum by(container) (container_memory_usage_bytes{co
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
 
-screenshot answer-img/Dashboard Measure SLI.png
+
+![Alt text](answer-img/Dashboard Measure SLI.png) 
 
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
 
-screenshot answer-img/Dashboard_Jaeger.png
-screenshot answer-img/backend_code_tracing.png
+![Alt text](answer-img/Dashboard_Jaeger.png) 
+![Alt text](answer-img/backend_code_tracing.png) 
+
 
 
 ## Jaeger in Dashboards
@@ -147,5 +151,5 @@ memory usage by application - gives memory usage by application in mb
 
 The final dashboard gives snapshot of all key kpi in once place and helps in determining and troubleshooting any issue with the application
 
-screenshot answer-img/Final_dashboard_1.png
-screenshot answer-img/Final_dashboard_2.png
+![Alt text](answer-img/Final_dashboard_1.png) 
+![Alt text](answer-img/Final_dashboard_2.png) 
