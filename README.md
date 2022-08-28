@@ -48,7 +48,7 @@ memory usage by application - sum by(container) (container_memory_usage_bytes{co
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
 
-![Alt text](answer-img/Dashboard_Jaeger.png) 
+![Alt text](answer-img/Jaeger_span.png) 
 ![Alt text](answer-img/backend_code_tracing.png) 
 
 
