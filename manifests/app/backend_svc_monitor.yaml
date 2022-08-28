@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: monitoring
+  name: backend-metrics
+  labels:
+    app: backend-metrics
+spec:
+  ports:
+    - name: metrics
+      port: 8081
+      protocol: TCP
+      targetPort: backendport
+  selector:
+    app: backend
+  type: LoadBalancer
+    
+
+
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  namespace: monitoring
+  name: backend
+  labels:
+    component: backend
+    prometheus: kube-prometheus
+spec:
+  endpoints:
+    - interval: 15s
+      port: metrics
+      path: /metrics
+  jobLabel: component
+  namespaceSelector:
+    matchNames:
+    - backend
+  selector:
+    matchLabels:
+      app: backend-metrics
