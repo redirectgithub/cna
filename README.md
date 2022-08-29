@@ -76,7 +76,7 @@ Affected Area: get-python-jobs function
 
 Severity:high
 
-Description:JSONDecodeError: There's an issue around the way the request-response data is structured, cannot evaluate the length of the JSON output.
+Description:JSONDecodeError: There seems to issue with value not found, screenshot below
 
 ![Alt text](answer-img/error_description.png) 
 
