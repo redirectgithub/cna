@@ -76,7 +76,7 @@ Affected Area: get-python-jobs function
 
 Severity:high
 
-Description:JSONDecodeError: There seems to issue with value not found, screenshot below
+Description:JSONDecodeError: There seems to issue with value not found on function get-python-jobs, screenshot below
 
 ![Alt text](answer-img/error_description.png) 
 
