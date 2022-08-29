@@ -69,7 +69,7 @@ TROUBLE TICKET
 
 Name: frontend error
 
-Date: 2022-08-26 09:06:55.947
+Date: 2022-08-28 19:59:46.205
 
 Subject: frontend 500 error
 
@@ -77,43 +77,10 @@ Affected Area: get-python-jobs function
 
 Severity:high
 
-Description:
+Description:JSONDecodeError: There's an issue around the way the request-response data is structured, cannot evaluate the length of the JSON output.
 
-{
-  "key": "pod.name",
-  "type": "string",
-  "value": "frontend-65c774fc57-ktljp"
-}
+![Alt text](answer-img/error_description.png) 
 
-{
-  "key": "pod.namespace",
-  "type": "string",
-  "value": "default"
-}
-
-{
-  "key": "error.kind",
-  "type": "string",
-  "value": "<class 'json.decoder.JSONDecodeError'>"
-}
-
-{
-  "key": "message",
-  "type": "string",
-  "value": "Expecting value: line 1 column 1 (char 0)"
-}
-
-"  File "app.py", line 62, in trace
-    span.log_kv({"event": "get jobs count", "count": len(res.json())})
-  File "/usr/local/lib/python3.7/site-packages/requests/models.py", line 898, in json
-    return complexjson.loads(self.text, **kwargs)
-  File "/usr/local/lib/python3.7/json/__init__.py", line 348, in loads
-    return _default_decoder.decode(s)
-  File "/usr/local/lib/python3.7/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/usr/local/lib/python3.7/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-"
 
 
 ## Creating SLIs and SLOs
