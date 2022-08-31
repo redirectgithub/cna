@@ -37,13 +37,10 @@ uptime 30 days - up{container=~"backend|frontend"}
 
 downtime 30 days - (1- up{container=~"backend|frontend"})
 
-screenshot ![Alt text](answer-img/5_SLI.png)
 
 ## Create a Dashboard to measure our SLIs
-*TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
 
-
-![Alt text](answer-img/Dashboard_Measure_SLI.png) 
+screenshot ![Alt text](answer-img/5_SLI.png)
 
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
