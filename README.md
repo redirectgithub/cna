@@ -25,19 +25,19 @@ SLO's are performance objectives which are measured internally. SLI's are specif
 
 ## Creating SLI metrics.
 
-error - sum(flask_http_request_total{container=~"backend|frontend",status=~"403|404|410|500"}) by (status,container)
-uptime container - sum(up{container=~"backend|frontend"}) by (pod)
+Five SLI metrics are below.
 
-node_network_traffic - rate(node_network_transmit_bytes_total[$__rate_interval])
-http_total_request_by_container - flask_http_request_total{container=~"backend|frontend"}
+Total 500 Errors - sum(flask_http_request_total{container=~"backend|frontend",status=~"500"}) by (status,container)
 
-response_duration -sum(rate(flask_http_request_duration_seconds_bucket[1m])) / sum(rate(flask_http_request_duration_seconds_count[1m]))
-response_time_duration_by_endpoint - rate(flask_http_request_duration_seconds_sum{container=~"backend|frontend"}[$__rate_interval])
+avg over time uptime last 30 days - avg_over_time(up{container=~"backend|frontend"}[1d]) * 100
 
+avg over time downtime last 30 days - (1- (avg_over_time(up{job=~"backend|frontend"} [1d]) > 0 )) * 100
 
-cpu_usage_by_application - sum by(container) (rate(container_cpu_usage_seconds_total{container=~"backend|frontend"}[1m]))
-memory usage by application - sum by(container) (container_memory_usage_bytes{container=~"backend|frontend", namespace="default"})/1000000
+uptime 30 days - up{container=~"backend|frontend"}
 
+downtime 30 days - (1- up{container=~"backend|frontend"})
+
+screenshot ![Alt text](answer-img/5_SLI.png)
 
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
