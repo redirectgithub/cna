@@ -83,10 +83,10 @@ Description:JSONDecodeError: There seems to issue with value not found on functi
 
 SLO
 
-Error                      error budget 10% 
-availability               99.95 %  
-latency                    99.95% for request below 100 ms
-Saturation                 cpu below 80% 
+Error             error budget 10% 
+availability      99.95 %  
+latency           99.95% for request below 100 ms
+Saturation        cpu below 80% 
 
 
 SLI                                                 
