@@ -80,12 +80,21 @@ Description:JSONDecodeError: There seems to issue with value not found on functi
 ## Creating SLIs and SLOs
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
 
-                         SLI                                                 SLO
 
-Error                  10 failure within 5 mins                           error budget 10% 
-availability           99.95%  successful request                         99.95 %   
-latency                99.95% of request finish within 5 mins             99.95% for request below 100 ms
-Saturation             99% cpu usage below 80% every month                cpu below 80%             
+SLO
+
+Error                      error budget 10% 
+availability               99.95 %  
+latency                    99.95% for request below 100 ms
+Saturation                 cpu below 80% 
+
+
+SLI                                                 
+
+Error                  10 failure within 5 mins                           
+availability           99.95%  successful request                           
+latency                99.95% of request finish within 5 mins             
+Saturation             99% cpu usage below 80% every month                            
 
 
 
