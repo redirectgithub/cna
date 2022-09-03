@@ -23,19 +23,17 @@ screenshot ![Alt text](answer-img/prometheus_datasource_grafana.png)
 SLO's are performance objectives which are measured internally. SLI's are specific metrics to measure SLOs monthly uptime and request response time. These metrics will help us determine if we are meeting SLOs for the application reliability and latency.
 
 
-## Creating SLI metrics.
+## Describe in detail 5 metrics to measure SLIs.
 
-Five SLI metrics are below.
+Five metrics to measure SLI
 
-Total 500 Errors - sum(flask_http_request_total{container=~"backend|frontend",status=~"500"}) by (status,container)
-
-avg over time uptime last 30 days - avg_over_time(up{container=~"backend|frontend"}[1d]) * 100
-
-avg over time downtime last 30 days - (1- (avg_over_time(up{job=~"backend|frontend"} [1d]) > 0 )) * 100
-
-uptime 30 days - up{container=~"backend|frontend"}
-
-downtime 30 days - (1- up{container=~"backend|frontend"})
+1  Latency: Latency is the time required to send a request and receive a response.
+2. Traffic: Traffic is a measure of request numbers passing through the network. These can be HTTP requests sent to your web or API server, 
+            or   messages sent to a processing queue.
+3. Errors: Errors can tell you about a bug in your code, an unresolved dependency, or configuration errors in your infrastructure.
+4. Saturation: Saturation is defined as the load on the resources of your server like network and CPU. Each resource has a limit beyond 
+               which performance degrades or becomes totally unavailable.
+5. Availability: Availability refers to the uptime of a website and directly relates to uptime of website on webserver.
 
 
 ## Create a Dashboard to measure our SLIs
@@ -82,12 +80,12 @@ Description:JSONDecodeError: There seems to issue with value not found on functi
 ## Creating SLIs and SLOs
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
 
-SLI
+                         SLI                                                 SLO
 
-Error,
-traffic,
-latency,
-saturation
+Error                  10 failure within 5 mins                           error budget 10% 
+availability           99.95%  successful request                         99.95 %   
+latency                99.95% of request finish within 5 mins             99.95% for request below 100 ms
+Saturation             99% cpu usage below 80% every month                cpu below 80%             
 
 
 
